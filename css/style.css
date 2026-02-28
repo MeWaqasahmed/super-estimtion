@@ -2514,6 +2514,394 @@ footer {
     color: #e67e22;
 }
 
+/* Industry Page Enhancements */
+.services-detailed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-detail-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid #f39c12;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.service-detail-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-detail-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(243, 156, 18, 0.15);
+}
+
+.service-detail-card .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.service-detail-card h3 {
+    color: #1a1a2e;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.service-detail-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-detail-card ul li {
+    padding: 0.6rem 0;
+    padding-left: 1.8rem;
+    position: relative;
+    color: #555;
+    line-height: 1.6;
+    transition: all 0.2s ease;
+}
+
+.service-detail-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #f39c12;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.service-detail-card ul li:hover {
+    color: #1a1a2e;
+    padding-left: 2rem;
+}
+
+/* Project Types Section Enhancement */
+.project-types-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 4rem 2rem;
+}
+
+.project-types-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-column {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-list li {
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: #555;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+}
+
+.project-list li:last-child {
+    border-bottom: none;
+}
+
+.project-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #f39c12;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.project-list li:hover {
+    color: #1a1a2e;
+    padding-left: 2.3rem;
+    background: #f8f9fa;
+}
+
+/* Cost Factors Enhancement */
+.cost-factors {
+    background: #fff;
+    padding: 4rem 2rem;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+}
+
+.factors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.factor-card {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid #f39c12;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.factor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(243, 156, 18, 0.15);
+    border-left-width: 6px;
+}
+
+.factor-card h3 {
+    color: #1a1a2e;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.factor-card p {
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.factors-conclusion {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 900px;
+    margin: 3rem auto 0;
+    line-height: 1.8;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid #f39c12;
+}
+
+/* Industry Hero Enhancement */
+.industry-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(243,156,18,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.industry-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.industry-hero h1 {
+    color: #fff;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    color: #f39c12;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.industry-hero p {
+    color: #e0e0e0;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+/* Industry Intro Enhancement */
+.industry-intro {
+    padding: 4rem 2rem;
+    background: #fff;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.intro-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.intro-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(243,156,18,0.1), rgba(230,126,34,0.1));
+    pointer-events: none;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.intro-image:hover img {
+    transform: scale(1.05);
+}
+
+.intro-content h2 {
+    color: #1a1a2e;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.intro-content p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Industry Services Section */
+.industry-services {
+    background: #f8f9fa;
+    padding: 4rem 2rem;
+}
+
+.industry-services h2 {
+    color: #1a1a2e;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Industry CTA Enhancement */
+.industry-cta {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.industry-cta h2 {
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.industry-cta p {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.industry-cta .cta-buttons {
+    position: relative;
+    z-index: 1;
+}
+
+.industry-cta .btn-primary {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+.industry-cta .btn-primary:hover {
+    background: #16213e;
+    transform: translateY(-3px);
+}
+
+.industry-cta .btn-secondary {
+    background: #fff;
+    color: #f39c12;
+    border: 2px solid #fff;
+}
+
+.industry-cta .btn-secondary:hover {
+    background: transparent;
+    color: #fff;
+}
+
 /* Mobile Dropdown Adjustments */
 @media (max-width: 768px) {
     .nav-menu li.has-dropdown .dropdown-menu {
@@ -2543,7 +2931,28 @@ footer {
     .features-grid-detailed,
     .project-types-grid,
     .deliverables-list,
-    .services-grid-small {
+    .services-grid-small,
+    .services-detailed-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-types-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .factors-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .industry-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
     }
 }
