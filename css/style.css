@@ -2920,12 +2920,13 @@ footer {
     }
     
     .nav-menu li.has-dropdown > a::after {
-        content: '+';
-        font-size: 1.2rem;
+        content: '▼';
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
     }
     
     .nav-menu li.has-dropdown.active > a::after {
-        content: '−';
+        content: '▲';
     }
     
     .features-grid-detailed,

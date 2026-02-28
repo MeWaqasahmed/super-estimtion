@@ -34,9 +34,42 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Close menu when clicking on a link
-        const navLinks = navMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
+        // Handle dropdown parent clicks - toggle dropdown without closing menu
+        const dropdownParents = document.querySelectorAll('.nav-menu li.has-dropdown > a');
+        dropdownParents.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const parent = this.parentElement;
+                
+                // Close other dropdowns
+                document.querySelectorAll('.nav-menu li.has-dropdown').forEach(item => {
+                    if (item !== parent) {
+                        item.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current dropdown
+                parent.classList.toggle('active');
+            });
+        });
+        
+        // Close menu only when clicking on dropdown submenu links
+        const dropdownLinks = navMenu.querySelectorAll('.dropdown-menu a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                mobileToggle.innerHTML = '☰';
+                // Close all dropdowns
+                document.querySelectorAll('.nav-menu li.has-dropdown').forEach(item => {
+                    item.classList.remove('active');
+                });
+            });
+        });
+        
+        // Close menu when clicking on non-dropdown links
+        const regularLinks = navMenu.querySelectorAll('li:not(.has-dropdown) > a');
+        regularLinks.forEach(link => {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
                 mobileToggle.innerHTML = '☰';
@@ -51,6 +84,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 mobileToggle.innerHTML = '☰';
+                // Close all dropdowns
+                document.querySelectorAll('.nav-menu li.has-dropdown').forEach(item => {
+                    item.classList.remove('active');
+                });
             }
         });
     }
@@ -232,28 +269,3 @@ backToTopButton.addEventListener('click', () => {
 console.log('%cSuperEstimation', 'color: #f39c12; font-size: 24px; font-weight: bold;');
 console.log('%cAmerica\'s Most Trusted Electrical Estimating Company', 'color: #1a1a2e; font-size: 14px;');
 console.log('Website built with care for electrical contractors across all 50 US states.');
-
-
-// Mobile Dropdown Menu Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    if (window.innerWidth <= 768) {
-        const dropdownParents = document.querySelectorAll('.nav-menu li.has-dropdown > a');
-        
-        dropdownParents.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const parent = this.parentElement;
-                
-                // Close other dropdowns
-                document.querySelectorAll('.nav-menu li.has-dropdown').forEach(item => {
-                    if (item !== parent) {
-                        item.classList.remove('active');
-                    }
-                });
-                
-                // Toggle current dropdown
-                parent.classList.toggle('active');
-            });
-        });
-    }
-});
