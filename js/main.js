@@ -238,18 +238,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const animateElements = document.querySelectorAll('.feature, .service-item, .blog-card, .testimonial, .pricing-card, .team-member, .value, .industry-card, .service-detail-card, .factor-card, .project-type-card, .faq-item, .case-study, .testimonial-card');
     
     animateElements.forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
+        // Keep elements visible - don't set opacity to 0
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        el.style.transitionDelay = `${index * 0.1}s`;
         observer.observe(el);
     });
     
     // Animate section headings
     const headings = document.querySelectorAll('section h2');
     headings.forEach((heading, index) => {
-        heading.style.opacity = '0';
-        heading.style.transform = 'translateY(-20px)';
+        // Keep headings visible - don't set opacity to 0
         heading.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
         observer.observe(heading);
     });
