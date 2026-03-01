@@ -696,10 +696,36 @@ footer {
 @media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;
+        padding: 3rem 1.5rem;
     }
     
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        line-height: 1.4;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    section {
+        padding: 3rem 1.5rem;
+    }
+    
+    section h2 {
+        font-size: 1.75rem;
+        line-height: 1.4;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    section p {
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: left;
     }
     
     .nav-menu {
@@ -713,6 +739,11 @@ footer {
     .stats-grid,
     .testimonials {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
     }
 }
 
@@ -2579,6 +2610,61 @@ footer {
         right: 20px;
         width: 45px;
         height: 45px;
+    }
+    
+    .industry-hero h1,
+    .page-hero h1 {
+        font-size: 1.75rem;
+        line-height: 1.4;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    
+    .industry-hero p,
+    .page-hero p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .intro-content h2 {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+    
+    .intro-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    .services-detailed-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-detail-card {
+        padding: 1.5rem;
+    }
+    
+    .service-detail-card h3 {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+    
+    .project-types-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .factors-grid {
+        grid-template-columns: 1fr;
     }
 }
 
